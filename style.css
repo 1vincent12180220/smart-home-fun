@@ -1,0 +1,41 @@
+
+:root{--ink:#1d2c43;--muted:#64748b;--line:#dce5f1;--blue:#2563eb;--green:#15803d;--red:#dc2626;--panel:#fff}
+*{box-sizing:border-box}body{margin:0;background:#eef3fa;color:var(--ink);font-family:system-ui,"Microsoft JhengHei",sans-serif;line-height:1.55}
+main{max-width:1050px;margin:auto;padding:16px}h1{font-size:clamp(24px,4vw,35px);margin:0}h2{font-size:21px;margin:0 0 12px}h3{font-size:17px;margin:8px 0}
+header{background:#153b66;color:white;padding:22px;border-radius:18px;margin-bottom:16px}header p{margin:4px 0;color:#dbeafe}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:19px;margin:14px 0;box-shadow:0 4px 15px #10294c0a}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.metric{text-align:center;background:#f6f9ff;border-radius:13px;padding:18px}
+.value{font-size:clamp(27px,5vw,43px);font-weight:800;color:#1d4ed8}.muted{color:var(--muted);font-size:14px}.center{text-align:center}
+button{min-height:44px;padding:10px 15px;border:0;border-radius:10px;background:#475569;color:#fff;font-size:15px;font-weight:650;cursor:pointer;margin:4px;touch-action:manipulation}
+button:focus-visible,input:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}button:hover{filter:brightness(1.07)}button:disabled{opacity:.5;cursor:not-allowed}
+.btn-blue{background:#2563eb}.btn-green{background:#15803d}.btn-red{background:#dc2626}.btn-teal{background:#0f766e}.btn-purple{background:#7c3aed}.btn-light{background:#e4ebf5;color:#24364d}
+.btn-active{box-shadow:inset 0 0 0 2px #facc15}.toolbar{display:flex;flex-wrap:wrap;justify-content:center;gap:4px}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.tabs button{flex:1;margin:0;min-width:145px}.hidden{display:none!important}.status{display:inline-block;padding:5px 12px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-weight:700}
+.led{display:inline-block;width:17px;height:17px;border-radius:50%;vertical-align:middle;border:1px solid #9ca3af;background:#94a3b8;margin-right:7px}
+/* Complete tree: each row shows the yes leaf on the left and the no continuation on the right. */
+.tree{max-width:700px;margin:12px auto}.tree-start{max-width:320px;margin:0 auto 10px}.tree-row{display:grid;grid-template-columns:minmax(0,1fr) 50px minmax(0,1fr);gap:6px;align-items:center;min-height:90px}
+.node{border:2px solid #cbd5e1;background:#f8fafc;border-radius:11px;padding:11px;text-align:center;font-size:14px;min-height:61px;display:flex;flex-direction:column;justify-content:center}
+.node small{font-size:12px;color:#64748b}.node.active{background:#dcfce7;border-color:#16a34a;color:#166534;font-weight:700}.node.result-active{background:#dbeafe;border-color:#2563eb;color:#1d4ed8;font-weight:800}.node.inactive{opacity:.5}
+.branch{text-align:center;font-size:12px;color:#64748b}.branch.passed{color:#15803d;font-weight:800}.path{max-width:510px;margin:auto}.step{background:#dcfce7;border:2px solid #16a34a;border-radius:10px;padding:11px;text-align:center;margin:7px 0;font-weight:700}.step.end{background:#dbeafe;border-color:#2563eb;color:#1d4ed8}.down{text-align:center;color:#16a34a}
+.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.choice-grid button{margin:0;min-height:55px;background:#f0f5fc;color:#213650;border:2px solid #d8e3f0}.choice-grid button.correct{background:#dcfce7;border-color:#16a34a}.choice-grid button.wrong{background:#fee2e2;border-color:#dc2626}
+.game-box{background:#f7faff;border:1px solid #dce7f5;border-radius:13px;padding:16px}.score{font-weight:800;font-size:19px}.game-metrics{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.game-metrics span{padding:10px 16px;background:white;border-radius:10px;font-size:22px;font-weight:800}
+.slider-row{display:grid;grid-template-columns:110px 1fr 70px;gap:10px;align-items:center;margin:13px 0}input[type=range]{width:100%;accent-color:#2563eb}.mission{border-left:5px solid #2563eb;padding:10px 14px;background:white;border-radius:8px;margin:12px 0}
+.feedback{border-radius:10px;background:#e8f0ff;padding:12px;margin:12px 0}.progress{height:10px;background:#dbe5f0;border-radius:20px;overflow:hidden}.progress>div{height:100%;background:#16a34a;width:0;transition:width .2s}
+@media(max-width:550px){main{padding:9px}.card{padding:13px;margin:10px 0}.tree-row{grid-template-columns:minmax(0,1fr) 23px minmax(0,1fr);gap:3px;min-height:83px}.node{font-size:12px;padding:7px 4px}.node small,.branch{font-size:10px}.slider-row{grid-template-columns:75px 1fr 56px;gap:5px}.choice-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.progress>div{transition:none}}
+
+
+/* Public website additions; all assets are bundled, no external dependencies. */
+body{background:linear-gradient(150deg,#e9f3ff 0%,#f4f7fc 55%,#eaf8f2 100%);min-height:100vh}
+main{max-width:980px}header{background:linear-gradient(115deg,#123f74,#17618c);padding:28px 24px}
+header h1{letter-spacing:.02em}header p{font-size:15px}
+.info-bar{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}
+.info-pill{display:inline-block;background:#fff;border:1px solid #dce5f1;border-radius:999px;padding:6px 12px;font-size:13px;color:#475569}
+.game-nav button[aria-pressed="true"]{box-shadow:0 0 0 3px #facc15}
+.lesson{background:#fff;border:1px solid #dce5f1;border-radius:16px;padding:18px;margin:14px 0}
+.rule-table{width:100%;border-collapse:collapse;font-size:14px}.rule-table th,.rule-table td{padding:9px;border-bottom:1px solid #e2e8f0;text-align:left}.rule-table th{background:#eff6ff}
+.lesson-path{display:grid;gap:8px;margin-top:10px}.lesson-step{border:1px solid #b7dec5;background:#effbf3;padding:10px;border-radius:9px;font-weight:600;text-align:center}.lesson-step:last-child{border-color:#a8c9f4;background:#e8f2ff}
+.game-box{background:#f8fbff}.game-metrics{margin:14px 0}.game-metrics span{border:1px solid #dbeafe}
+.choice-grid button{font-size:16px}.choice-grid button:disabled{opacity:1}
+footer{text-align:center;color:#64748b;font-size:13px;padding:20px 0 28px}
+@media(max-width:550px){header{padding:20px 16px}.info-bar{gap:6px}.info-pill{font-size:12px}.rule-table{font-size:12px}.rule-table th,.rule-table td{padding:7px 5px}}
